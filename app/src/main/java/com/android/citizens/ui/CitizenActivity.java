@@ -37,11 +37,11 @@ public class CitizenActivity extends AppCompatActivity {
             Citizen citizen = intent.getParcelableExtra("citizen");
 
             txtViewName.setText(String.format("%s %s", citizen.getLastName(), citizen.getFirstName()));
-            txtViewAge.setText(String.valueOf(citizen.getAge()));
-            txtViewWorkPlace.setText(citizen.getWorkPlace());
-            txtViewGender.setText(citizen.getGender());
-            txtViewLivingArea.setText(citizen.getLivingArea());
-            txtViewCar.setText(citizen.getCar() ? "Присутствует" : "Отсутствует");
+            txtViewAge.setText(String.format("Возраст: %s", citizen.getAge()));
+            txtViewWorkPlace.setText(String.format("Место работы: %s", citizen.getWorkPlace()));
+            txtViewGender.setText(String.format("Пол: %s", citizen.getGender()));
+            txtViewLivingArea.setText(String.format("Район проживания: %s", citizen.getLivingArea()));
+            txtViewCar.setText(String.format("Автомобиль: %s", citizen.getCar() ? "Да" : "Нет"));
         }
     }
 
