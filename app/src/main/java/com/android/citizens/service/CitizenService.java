@@ -85,8 +85,7 @@ public class CitizenService extends Service {
                 try {
                     SharedPreferences preferences = PreferenceManager
                             .getDefaultSharedPreferences(getApplicationContext());
-                    int period = 10;
-                    // int period = Integer.parseInt(preferences.getString("period", DEFAULT_PERIOD));
+                    int period = Integer.parseInt(preferences.getString("period", DEFAULT_PERIOD));
                     mCitizenList = getCitizens();
                     sleep(period * 1000);
                 } catch (InterruptedException e) {
