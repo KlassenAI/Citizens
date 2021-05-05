@@ -1,0 +1,22 @@
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <EditTextPreference
+        android:key="period"
+        android:title="Период генерации списка граждан"
+        android:dialogTitle="Введите значение в диапозоне от 2 до 30"
+        android:defaultValue="10" />
+
+    <EditTextPreference
+        android:key="min_age"
+        android:title="Минимальный возраст"
+        android:dialogTitle="Введите значение в диапозоне от 18 до максимального возраста"
+        android:defaultValue="22" />
+
+    <EditTextPreference
+        android:key="max_age"
+        android:title="Максимальный возраст"
+        android:dialogTitle="Введите значение в диапозоне от минимального возраста до 60"
+        android:defaultValue="35" />
+
+</PreferenceScreen>
