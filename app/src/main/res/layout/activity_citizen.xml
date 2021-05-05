@@ -4,114 +4,74 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="8dp"
+    android:padding="4dp"
     tools:context=".ui.CitizenActivity">
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/txtFieldName"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+    <TextView
+        android:id="@+id/txtViewCitizenName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/name"
+        android:layout_margin="4dp"
+        android:text="@string/name"
+        android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/txtEditName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/txtFieldAge"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+    <TextView
+        android:id="@+id/txtViewCitizenAge"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/age"
-        android:layout_marginTop="4dp"
+        android:layout_margin="4dp"
+        android:text="@string/age"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtFieldName">
+        app:layout_constraintTop_toBottomOf="@+id/txtViewCitizenName" />
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/txtEditAge"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/txtFieldWorkPlace"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+    <TextView
+        android:id="@+id/txtViewCitizenWorkPlace"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/work_place"
-        android:layout_marginTop="4dp"
+        android:layout_margin="4dp"
+        android:text="@string/work_place"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtFieldAge">
+        app:layout_constraintTop_toBottomOf="@+id/txtViewCitizenAge" />
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/txtEditWorkPlace"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/txtFieldGender"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+    <TextView
+        android:id="@+id/txtViewCitizenGender"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/gender"
-        android:layout_marginTop="4dp"
+        android:layout_margin="4dp"
+        android:text="@string/gender"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtFieldWorkPlace">
+        app:layout_constraintTop_toBottomOf="@+id/txtViewCitizenWorkPlace" />
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/txtEditGender"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/txtFieldLivingArea"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+    <TextView
+        android:id="@+id/txtViewCitizenLivingArea"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/living_place"
-        android:layout_marginTop="4dp"
+        android:layout_margin="4dp"
+        android:text="@string/living_place"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtFieldGender">
+        app:layout_constraintTop_toBottomOf="@+id/txtViewCitizenGender" />
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/txtEditLivingArea"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/txtFieldCar"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+    <TextView
+        android:id="@+id/txtViewCitizenCar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/car"
-        android:layout_marginTop="4dp"
+        android:layout_margin="4dp"
+        android:text="@string/living_place"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtFieldLivingArea">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/txtEditCar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-
-    </com.google.android.material.textfield.TextInputLayout>
+        app:layout_constraintTop_toBottomOf="@+id/txtViewCitizenLivingArea" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -8,6 +8,7 @@ import androidx.core.app.NavUtils;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.citizens.R;
@@ -18,36 +19,29 @@ import com.google.android.material.textview.MaterialTextView;
 
 public class CitizenActivity extends AppCompatActivity {
 
-    private TextInputEditText txtEditName;
-    private TextInputEditText txtEditAge;
-    private TextInputEditText txtEditWorkPlace;
-    private TextInputEditText txtEditGender;
-    private TextInputEditText txtEditLivingArea;
-    private TextInputEditText txtEditCar;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_citizen);
         setTitle("Гражданин");
 
-        txtEditName = findViewById(R.id.txtEditName);
-        txtEditAge = findViewById(R.id.txtEditAge);
-        txtEditWorkPlace = findViewById(R.id.txtEditWorkPlace);
-        txtEditGender = findViewById(R.id.txtEditGender);
-        txtEditLivingArea = findViewById(R.id.txtEditLivingArea);
-        txtEditCar = findViewById(R.id.txtEditCar);
+        TextView txtViewName = findViewById(R.id.txtViewCitizenName);
+        TextView txtViewAge = findViewById(R.id.txtViewCitizenAge);
+        TextView txtViewWorkPlace = findViewById(R.id.txtViewCitizenWorkPlace);
+        TextView txtViewGender = findViewById(R.id.txtViewCitizenGender);
+        TextView txtViewLivingArea = findViewById(R.id.txtViewCitizenLivingArea);
+        TextView txtViewCar = findViewById(R.id.txtViewCitizenCar);
 
         Intent intent = getIntent();
         if (intent != null) {
             Citizen citizen = intent.getParcelableExtra("citizen");
 
-            txtEditName.setText(String.format("%s %s", citizen.getLastName(), citizen.getFirstName()));
-            txtEditAge.setText(String.valueOf(citizen.getAge()));
-            txtEditWorkPlace.setText(citizen.getWorkPlace());
-            txtEditGender.setText(citizen.getGender());
-            txtEditLivingArea.setText(citizen.getLivingArea());
-            txtEditCar.setText(citizen.getCar() ? "Присутствует" : "Отсутствует");
+            txtViewName.setText(String.format("%s %s", citizen.getLastName(), citizen.getFirstName()));
+            txtViewAge.setText(String.valueOf(citizen.getAge()));
+            txtViewWorkPlace.setText(citizen.getWorkPlace());
+            txtViewGender.setText(citizen.getGender());
+            txtViewLivingArea.setText(citizen.getLivingArea());
+            txtViewCar.setText(citizen.getCar() ? "Присутствует" : "Отсутствует");
         }
     }
 
